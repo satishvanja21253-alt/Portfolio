@@ -21,11 +21,11 @@ export default function About() {
         {about.stats.map((stat) => (
           <div
             key={stat.label.join(' ')}
-            className="flex items-center gap-5 border-b border-ink/15 py-5 last:border-b-0"
+            className="flex items-center gap-4 sm:gap-5 border-b border-ink/15 py-4 sm:py-5 last:border-b-0"
           >
-            <dd className="min-w-[7.5rem] font-display text-5xl leading-none">
+            <dd className="min-w-[5.5rem] sm:min-w-[7.5rem] font-display text-4xl sm:text-5xl leading-none">
               {stat.value}
-              <span className="ml-0.5 text-3xl">{stat.suffix}</span>
+              <span className="ml-0.5 text-2xl sm:text-3xl">{stat.suffix}</span>
             </dd>
             <dt className="text-[10px] font-semibold uppercase leading-relaxed tracking-[0.14em]">
               {stat.label.map((line) => (
@@ -38,12 +38,12 @@ export default function About() {
         ))}
       </dl>
 
-      <div className="relative min-h-[300px] overflow-hidden bg-ink" aria-hidden="true">
-        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-display text-[19rem] leading-none text-rust">
+      <div className="relative min-h-[220px] sm:min-h-[280px] lg:min-h-[300px] overflow-hidden bg-ink" aria-hidden="true">
+        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-display text-[12rem] sm:text-[16rem] lg:text-[19rem] leading-none text-rust select-none">
           S
         </span>
-        <span className="absolute right-[14%] top-[12%] h-4 w-4 bg-amber" />
-        <span className="absolute bottom-[10%] left-[9%] h-4 w-4 bg-cream" />
+        <span className="absolute right-[14%] top-[12%] h-3.5 w-3.5 sm:h-4 sm:w-4 bg-amber" />
+        <span className="absolute bottom-[10%] left-[9%] h-3.5 w-3.5 sm:h-4 sm:w-4 bg-cream" />
       </div>
     </section>
   )

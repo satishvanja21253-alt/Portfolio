@@ -31,9 +31,9 @@ export default function Skills() {
         {process.map((step, index) => (
           <li
             key={step}
-            className="flex items-center gap-6 border-b border-ink/15 py-3 last:border-b-0"
+            className="flex items-center gap-4 sm:gap-6 border-b border-ink/15 py-3 last:border-b-0"
           >
-            <span className={`font-display text-6xl leading-none ${stepColors[index % stepColors.length]}`}>
+            <span className={`font-display text-5xl sm:text-6xl leading-none ${stepColors[index % stepColors.length]}`}>
               {String(index + 1).padStart(2, '0')}
             </span>
             <span className="text-xs font-bold uppercase tracking-[0.16em]">{step}</span>
@@ -42,10 +42,10 @@ export default function Skills() {
       </ol>
 
       <div className="flex flex-col justify-center border-t border-ink/15 px-5 py-10 md:px-10 lg:border-l lg:border-t-0">
-        <p className="max-w-xs text-lg leading-relaxed">{processNote}</p>
+        <p className="max-w-xs text-base sm:text-lg leading-relaxed">{processNote}</p>
         <a
           href="#contact"
-          className="mt-8 inline-flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.14em] transition-colors hover:text-rust"
+          className="mt-6 sm:mt-8 inline-flex min-h-[44px] items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.14em] transition-colors hover:text-rust"
         >
           <span className="border-b border-current pb-1">Let&apos;s work together</span>
           <Arrow />

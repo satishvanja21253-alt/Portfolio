@@ -54,7 +54,7 @@ export default function Projects() {
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   aria-expanded={isOpen}
                   aria-controls="project-details"
-                  className="inline-flex cursor-pointer items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.14em] transition-colors hover:text-rust"
+                  className="inline-flex min-h-[44px] cursor-pointer items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.14em] transition-colors hover:text-rust"
                 >
                   <span className="border-b border-current pb-1">
                     {isOpen ? 'Hide project' : 'View project'}
@@ -75,12 +75,12 @@ export default function Projects() {
                 {active.client}
               </p>
               <h3 className="mt-2 font-display text-3xl uppercase">{active.category}</h3>
-              <p className="mt-4 max-w-md leading-relaxed">{active.summary}</p>
+              <p className="mt-4 max-w-md text-base leading-relaxed sm:text-lg">{active.summary}</p>
             </div>
-            <dl className="grid grid-cols-2 gap-x-8 gap-y-6">
+            <dl className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               {active.metrics.map((metric) => (
                 <div key={metric.label} className="border-t border-ink/20 pt-4">
-                  <dd className="font-display text-4xl leading-none md:text-5xl">{metric.value}</dd>
+                  <dd className="font-display text-3xl leading-none sm:text-4xl md:text-5xl">{metric.value}</dd>
                   <dt className="mt-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink/70">
                     {metric.label}
                   </dt>

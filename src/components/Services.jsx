@@ -29,23 +29,23 @@ export default function Services() {
         <h2 className="font-display text-4xl uppercase md:text-5xl">Services</h2>
         <a
           href="#contact"
-          className="inline-flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.14em]"
+          className="inline-flex min-h-[44px] items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.14em]"
         >
           <span className="border-b border-current pb-1">Discuss a project</span>
           <Arrow />
         </a>
       </div>
 
-      <div className="mt-9 grid gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-9 grid gap-y-8 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-0">
         {services.map((service, index) => (
           <article
             key={service.title}
-            className={`flex gap-5 lg:px-6 ${index === 0 ? 'lg:pl-0' : 'lg:border-l lg:border-ink/25'}`}
+            className={`flex items-start gap-4 sm:gap-5 lg:px-6 ${index === 0 ? 'lg:pl-0' : 'lg:border-l lg:border-ink/25'}`}
           >
             <ServiceIcon type={service.icon} />
             <div>
               <h3 className="text-[11px] font-bold uppercase tracking-[0.14em]">{service.title}</h3>
-              <p className="mt-2 max-w-[16rem] text-sm leading-relaxed">{service.text}</p>
+              <p className="mt-2 text-sm leading-relaxed max-w-sm lg:max-w-[16rem]">{service.text}</p>
             </div>
           </article>
         ))}

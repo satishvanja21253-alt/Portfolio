@@ -61,14 +61,14 @@ export default function Contact() {
   }
 
   const fieldClass =
-    'w-full border-b border-cream/40 bg-transparent py-2 text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-amber'
+    'w-full border-b border-cream/40 bg-transparent py-2.5 text-base sm:text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-amber'
   const labelClass = 'block text-[10px] font-semibold uppercase tracking-[0.16em] text-cream/70'
-  const detailClass = 'flex items-center gap-5 text-[11px] font-semibold uppercase tracking-[0.12em]'
+  const detailClass = 'flex min-h-[44px] items-center gap-4 sm:gap-5 text-[11px] font-semibold uppercase tracking-[0.12em]'
 
   return (
     <section id="contact" className="grid lg:grid-cols-[1fr_1fr_1.15fr]">
-      <div className="flex items-center bg-rust px-5 py-12 md:px-10">
-        <h2 className="font-display text-5xl uppercase leading-[1.02] xl:text-6xl">
+      <div className="flex items-center bg-rust px-5 py-10 md:px-10 md:py-12">
+        <h2 className="font-display text-4xl sm:text-5xl uppercase leading-[1.02] xl:text-6xl">
           Let&apos;s grow
           <br />
           something
@@ -168,7 +168,7 @@ export default function Contact() {
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="mt-6 flex w-full cursor-pointer items-center justify-between border-b border-cream/40 pb-3 text-[11px] font-semibold uppercase tracking-[0.16em] transition-colors hover:border-amber hover:text-amber disabled:cursor-not-allowed disabled:opacity-60"
+          className="mt-6 flex min-h-[48px] w-full cursor-pointer items-center justify-between border-b border-cream/40 pb-3 text-[11px] font-semibold uppercase tracking-[0.16em] transition-colors hover:border-amber hover:text-amber disabled:cursor-not-allowed disabled:opacity-60"
         >
           {status === 'sending' ? 'Sending…' : 'Send message'}
           <Arrow />

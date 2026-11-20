@@ -47,18 +47,28 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav className="border-t border-ink/15 px-5 py-2 lg:hidden" aria-label="Mobile">
-          {navLinks.map((link) => (
+        <nav className="border-t border-ink/15 px-5 py-3 lg:hidden" aria-label="Mobile">
+          <div className="flex flex-col">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="flex min-h-[44px] items-center justify-between border-b border-ink/10 py-3 text-xs font-semibold uppercase tracking-[0.14em] transition-colors hover:text-rust"
+              >
+                {link.label}
+                <Arrow />
+              </a>
+            ))}
             <a
-              key={link.href}
-              href={link.href}
+              href="#contact"
               onClick={() => setOpen(false)}
-              className="flex items-center justify-between border-b border-ink/10 py-4 text-xs font-semibold uppercase tracking-[0.14em] last:border-b-0"
+              className="mt-4 flex min-h-[44px] items-center justify-center gap-3 bg-ink px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.14em] text-cream transition-colors hover:bg-rust"
             >
-              {link.label}
-              <Arrow />
+              Let&apos;s talk
+              <Arrow direction="upRight" />
             </a>
-          ))}
+          </div>
         </nav>
       )}
     </header>
